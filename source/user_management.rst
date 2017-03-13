@@ -34,8 +34,9 @@ Welcome to User management's documentation!
     - Gửi mail cho từng người sử dụng với thông tin tài khoản: Lựa chọn này cho phép gửi Tên tài khoản và Mật khẩu về email của người dùng.
     - Kéo thả hoặc nhấn vào đây để tải tệp: Click vào link này để tải file đã nhập thông tin người dùng.
 
+***************************************
 2. Kết nối một SIP phone cho người dùng
-*********************
+****************************************
  Chọn Bật VOIP để hiển thị giao diện SIP phone như sau.
   .. image:: /images/user/image_en3.jpg  
 
