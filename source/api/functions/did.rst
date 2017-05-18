@@ -79,3 +79,35 @@ did.order.pay
 
 **Result:**
 	Information on whether the payment has succeeded
+
+
+======
+did.configure
+------------------
+
+	Configure an existing phone number
+
+**Parameter:**
+	- phone_number: The phone number to be configured
+	- routing_params: A JSON object containing these 2 keys:
+		- application: The name of the routing application
+		- params: The parameters to the routing application
+
+	Example of calling did.configure:
+
+		{
+			"method": "did.configure",
+			"params": [
+						"1222222222",
+						{
+							"application": "call_phone_number",
+							"params": {"number": "133333333"}
+						}
+			]
+		}
+
+	For the list of routing applications and its parameters, check here: :ref:`Routing Applications`
+
+
+**Result:**
+	Information on whether the payment has succeeded
