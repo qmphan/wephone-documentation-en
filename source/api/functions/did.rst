@@ -3,10 +3,9 @@ Functions for buying phone numbers
 *************************************
 
 
-====
-
+==================
 did.zone.list_country
----------------------
+==================
 
 Get the list of countries you can buy phone number from.
 
@@ -31,10 +30,11 @@ Get the list of countries you can buy phone number from.
 			]
 		}
 
-======
 
+
+===================
 did.zone.list_area
-------------------
+===================
 
 Get areas list in a country
 
@@ -46,9 +46,9 @@ Get areas list in a country
 	The list of areas from which you can buy phone numbers.
 
 
-======
+==================
 did.reserve
-------------------
+==================
 
 
 **Parameter:**
@@ -68,9 +68,9 @@ did.reserve
 	}
 
 
-======
+==================
 did.order.pay
-------------------
+==================
 
 	Valid an order and pay for it.
 
@@ -81,9 +81,9 @@ did.order.pay
 	Information on whether the payment has succeeded
 
 
-======
+==================
 did.configure
-------------------
+==================
 
 	Configure an existing phone number
 
