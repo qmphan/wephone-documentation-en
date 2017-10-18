@@ -4,15 +4,15 @@
    contain the root `toctree` directive.
 
 Welcome to Live page's documentation!
-===================================================
+=====================================
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-**********************
+******************
 1. Bảng điều khiển
-**********************
+******************
 
 Hiển thị các cuộc gọi trong ngày, số lượng điện thoại viên kết nối, cuộc gọi nhỡ ....
 
@@ -48,7 +48,7 @@ Hiển thị danh sách các cuộc gọi đang thực hiện, các tổng đài
 
 
 3. Đồ thị
-***********
+*********
  Thống kê các cuộc gọi đến, cuộc gọi nhỡ bằng biểu đồ theo ngày, tháng năm
  Thống kê các cuộc gọi trong ngày hôm nay như hình bên:
    .. image:: /images/live_page/image_en5.jpg
@@ -69,13 +69,13 @@ Hiển thị danh sách các cuộc gọi đang thực hiện, các tổng đài
    .. image:: /images/live_page/image_en10.jpg
 
 4. Hàng đợi cuộc gọi
-***********
+********************
   Hiển thị danh sách hàng đợi với thông tin hiển thị cuộc gọi và tổng đài viên trực tuyến
 
   .. image:: /images/live_page/image_en11.jpg
 
 5. Cuộc gọi nhỡ
-***********
+***************
  Thống kê danh sách các cuộc gọi nhỡ trong ngày như hình bên:
 
   .. image:: /images/live_page/image_en12.jpg
@@ -88,7 +88,7 @@ Hiển thị danh sách các cuộc gọi đang thực hiện, các tổng đài
   - Danh sách cuộc gọi nhỡ bao gồm: Thời gian gọi, số gọi, số được gọi, hàng đợi, người gọi, gọi lúc, số lần gọi còn lại, trạng thái, thư thoại, thao tác.
 
 6. Cuộc gọi đã xử lý
-***********
+********************
  Hiển thị danh sách các cuộc gọi đi và cuộc gọi đến trong ngày như hình bên:
  .. image:: /images/live_page/image_en13.jpg
 
