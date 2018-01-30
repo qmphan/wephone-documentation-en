@@ -25,27 +25,27 @@ Create a composer.json file as bellow, then run composer update:
 Here is the content of composer.json
 
 
-```json
-{
+.. code-block:: javascript
+  {
 
-    "name": "TestSMS",
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/wephone-saas/sdk-php.git"
-        }
-    ],
-    "require": {
-        "wephone/sdk-php": "dev-master"
-    }
-}
-```
+      "name": "TestSMS",
+      "repositories": [
+          {
+              "type": "vcs",
+              "url": "https://github.com/wephone-saas/sdk-php.git"
+          }
+      ],
+      "require": {
+          "wephone/sdk-php": "dev-master"
+      }
+  }
+
 
 Add more library dependency to your `composer.json` as needed. Remember to run `composer update` each time composer.json is updated.
 
 Add the next lines to your PHP source file so that it knows how to find wephone SDK:
 
-```php
+```
 <?php
 
 require 'vendor/autoload.php';
@@ -58,7 +58,7 @@ require 'vendor/autoload.php';
 
 
 
-```php
+```
 $client = new \WEPHONE\SDK\Client;
 $client->init("api-key-code", "https://admin.wephone.io");
 ```
@@ -70,21 +70,21 @@ $client->init("api-key-code", "https://admin.wephone.io");
 ### Get user list
 
 
-```php
+```
 $result = $client->call('user.list_all', array());
 ```
 
 ### Add a new user
 
 
-```php
+```
 $result = $client->call('user.create', array('first', 'last', 'email@domain.com'));
 ```
 
 ### Remove an user
 
 
-```php
+```
 $result = $client->call('user.remove', array('user_public_id'));
 ```
 
