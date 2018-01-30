@@ -22,9 +22,10 @@ To use the wePhone PHP SDK, you need to get the API key for your enterpise. This
 Using Composer (https://getcomposer.org/) is an easy way to manage PHP project dependency.
 Create a composer.json file as bellow, then run composer update:
 
-Here is the content of composer.json::
-  {
+Here is the content of composer.json
 
+```
+  {
       "name": "TestSMS",
       "repositories": [
           {
@@ -36,7 +37,7 @@ Here is the content of composer.json::
           "wephone/sdk-php": "dev-master"
       }
   }
-
+```
 
 Add more library dependency to your `composer.json` as needed. Remember to run `composer update` each time composer.json is updated.
 
