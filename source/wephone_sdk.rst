@@ -23,21 +23,24 @@ Using Composer (https://getcomposer.org/) is an easy way to manage PHP project d
 Create a composer.json file as bellow, then run composer update:
 
 Here is the content of composer.json
-```json
-{
 
-    "name": "TestSMS",
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/wephone-saas/sdk-php.git"
+
+.. code-block:: json
+   :linenos:
+    {
+
+        "name": "TestSMS",
+        "repositories": [
+            {
+                "type": "vcs",
+                "url": "https://github.com/wephone-saas/sdk-php.git"
+            }
+        ],
+        "require": {
+            "wephone/sdk-php": "dev-master"
         }
-    ],
-    "require": {
-        "wephone/sdk-php": "dev-master"
     }
-}
-```
+
 
 Add more library dependency to your `composer.json` as needed. Remember to run `composer update` each time composer.json is updated.
 
