@@ -63,17 +63,20 @@ $client->init("api-key-code", "https://admin.wephone.io");
 ### User management
 ### Get user list
 
+
 ```php
 $result = $client->call('user.list_all', array());
 ```
 
 ### Add a new user
 
+
 ```php
 $result = $client->call('user.create', array('first', 'last', 'email@domain.com'));
 ```
 
 ### Remove an user
+
 
 ```php
 $result = $client->call('user.remove', array('user_public_id'));
@@ -83,6 +86,7 @@ $result = $client->call('user.remove', array('user_public_id'));
 
 ### Send SMS API
 ### Send an SMS
+
 
 ```php
 $client = new \WEPHONE\SDK\Client;
@@ -102,11 +106,13 @@ $result = $client->call('sms.send',
 ### Phone Number API
 ### Get the list of enterprise DID
 
+
 ```php
 $result = $client->call('number.list_all', array());
 ```
 
 ### Buy a phone number
+
 
 ```php
 $result = $client->call('number.buy', array('country_code_2letter', 'number_prefix'));
@@ -114,11 +120,13 @@ $result = $client->call('number.buy', array('country_code_2letter', 'number_pref
 
 ### Return a phone number
 
+
 ```php
 $result = $client->call('number.return', array('returned_number'));
 ```
 
 ### Define call routing for a phone number
+
 
 ```php
 $routingData = array(
@@ -134,10 +142,10 @@ $result = $client->call('number.set_route', array('routed_number', $routingData)
 ### Call queue
 ### Get the list of all call queues
 
+
 ```php
 $result = $client->call('queue.list_all', array());
 ```
-
 
 
 Indices and tables
