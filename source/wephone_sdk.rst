@@ -25,26 +25,26 @@ Create a composer.json file as bellow, then run composer update:
 Here is the content of composer.json
 
 
-.. code-block:: json
-   :linenos:
-    {
+```json
+{
 
-        "name": "TestSMS",
-        "repositories": [
-            {
-                "type": "vcs",
-                "url": "https://github.com/wephone-saas/sdk-php.git"
-            }
-        ],
-        "require": {
-            "wephone/sdk-php": "dev-master"
+    "name": "TestSMS",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/wephone-saas/sdk-php.git"
         }
+    ],
+    "require": {
+        "wephone/sdk-php": "dev-master"
     }
-
+}
+```
 
 Add more library dependency to your `composer.json` as needed. Remember to run `composer update` each time composer.json is updated.
 
 Add the next lines to your PHP source file so that it knows how to find wephone SDK:
+
 ```php
 <?php
 
@@ -55,6 +55,9 @@ require 'vendor/autoload.php';
 #################################
 
 **Init**
+
+
+
 ```php
 $client = new \WEPHONE\SDK\Client;
 $client->init("api-key-code", "https://admin.wephone.io");
