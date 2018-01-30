@@ -11,65 +11,69 @@ Welcome to Phone number management's documentation!
    :caption: Contents:
 
 **********************
-1. WEPHONE SDK
+1. WEPHONE PHP SDK
 **********************
 
-Là thư viện mà wePhone cung cấp để gọi từ bên ngoài nhằm thực thi một số tính năng:
-- Liệt kê danh sách người dùng
-- ....
+wePhone PHP SDK is a PHP library that allow you to quickly call wePhone APIs. 
+To use the wePhone PHP SDK, you need to get the API key for your enterpise. This can be done by clicking on Settings --> API Integration at the botton of the left menu.
  
-1.1 Composer
+1.1 Setting up the library using composer
 #######################
-Sử dụng Composer (https://getcomposer.org/) để quản lý các PHP dependencies.
-Nếu chưa có `composer.json`, tạo một file ở thư mục root của project, tải về Composer, & chạy `composer update`.
+Using Composer (https://getcomposer.org/) is an easy way to manage PHP project dependency.
+Create a composer.json file as bellow, then run composer update:
 
-Tệp `composer.json` được config như dưới đây:
+Here is the content of composer.json
 ```json
 {
-    "name": "wephone/sdk-php",
-    "autoload": {
-        "psr-0" : {
-            "WEPHONE" : "src"
+
+    "name": "TestSMS",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/wephone-saas/sdk-php.git"
         }
+    ],
+    "require": {
+        "wephone/sdk-php": "dev-master"
     }
 }
 ```
 
-Thêm các thư viện khác cho project của bạn trong `composer.json`. Đừng quên chạy `composer update` mỗi khi sửa tệp.
+Add more library dependency to your `composer.json` as needed. Remember to run `composer update` each time composer.json is updated.
 
-Sau đó thêm các dòng sau vào code:
+Add the next lines to your PHP source file so that it knows how to find wephone SDK:
 ```php
 <?php
 
 require 'vendor/autoload.php';
 ```
 
-1.2 Cách sử dụng
+1.2 Usage example
 #################################
 
 **Init**
 ```php
 $client = new \WEPHONE\SDK\Client;
-$client->init("api-key-code");
+$client->init("api-key-code", "https://admin.wephone.io");
 ```
 
 ********************************************************************************
 
 
-### Người dùng
-### Lấy danh các các người dùng
+### User management
+### Get user list
 
 ```php
 $result = $client->call('user.list_all', array());
 ```
 
-### Thêm mới một người dùng
+### Add a new user
 
 ```php
 $result = $client->call('user.create', array('first', 'last', 'email@domain.com'));
 ```
 
-### Gỡ bỏ một người dùng
+### Remove an user
 
 ```php
 $result = $client->call('user.remove', array('user_public_id'));
@@ -77,27 +81,44 @@ $result = $client->call('user.remove', array('user_public_id'));
 
 ********************************************************************************
 
+### Send SMS API
+### Send an SMS
 
-### Số tổng đài
-### Lấy danh sách các số 
+```php
+$client = new \WEPHONE\SDK\Client;
+$client->init("xxxx", "https://admin.wephone.io");
+
+$result = $client->call('sms.send',
+                        array(  "sender" => "MySenderName",
+                                "destination" => "+33611111111",
+                                "message" => "Hello, how are you?"
+                             )
+                        );
+```
+
+
+********************************************************************************
+
+### Phone Number API
+### Get the list of enterprise DID
 
 ```php
 $result = $client->call('number.list_all', array());
 ```
 
-### Mua một số
+### Buy a phone number
 
 ```php
 $result = $client->call('number.buy', array('country_code_2letter', 'number_prefix'));
 ```
 
-### Trả về một số
+### Return a phone number
 
 ```php
 $result = $client->call('number.return', array('returned_number'));
 ```
 
-### Định tuyên cho một số
+### Define call routing for a phone number
 
 ```php
 $routingData = array(
@@ -110,8 +131,8 @@ $result = $client->call('number.set_route', array('routed_number', $routingData)
 ********************************************************************************
 
 
-### Hàng đợi
-### Lấy danh sách của hàng đợi
+### Call queue
+### Get the list of all call queues
 
 ```php
 $result = $client->call('queue.list_all', array());

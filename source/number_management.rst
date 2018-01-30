@@ -11,31 +11,32 @@ Welcome to Phone number management's documentation!
    :caption: Contents:
 
 **********************
-1. Định tuyến cuộc gọi
+1. Call routing
 **********************
 
-Là các đầu số của tổng đài dùng cho gọi vào và ra của doanh nghiệp
+This part define how an incoming call to a phone number should be routed
  .. image:: /images/call_routing/image_en1.jpg
 
  
-1.1 Định tuyến mặc định
+1.1 Default routing
 #######################
-Cấu hình số DID định tuyến các cuộc gọi tới một số điện thoại, một ứng dụng (hàng đợi, trình đơn IVR, ứng dụng IVR, hội nghị) hay chạy một thông điệp.
+An incoming call can be routed to different applications.
  .. image:: /images/call_routing/image_en2.jpg 
 
-Gọi tới số điện thoại: Có 2 lựa chọn 
-     - Số điện thoại: Nhập số điện thoại bất kỳ của người sử dụng
-     - Số Sip: Lựa chọn số SipPhone có sẵn trong danh sách hiển thị
-Gọi tới một ứng dụng: Có 4 lựa chọn
-     - Hàng đợi: Lựa chọn hàng đợi có sẵn trong danh sách hoặc tạo mới một hàng đợi để định tuyến cuộc gọi
-     - Hội nghị: Lựa chọn hội nghị có sẵn hoặc tạo mới một hội nghị.
-     - Trình đơn IVR: Lựa chọn trình đơn IVR có sẵn hoặc tạo mới một trình đơn
-     - Ứng dụng IVR: Lựa chọn ứng dụng IVR có sẵn hoặc tạo mới ứng dụng
-Chạy thông điệp: Tải file âm thanh thông báo có sẵn hay một đoạn nhạc
+Route to a number: 
+     - To an external phone number: This can be your mobile phone number or some other phone number
+     - SIP Phone: Some SIP phone extension of your enterprise
 
-1.2 Thời gian dựa trên định tuyến
+Route call to an application:
+     - Call queue
+     - Conference: 3 or more persons can discuss altogether inside a conference.
+     - IVR Menu: An IVR Menu that allow you to make choise using the phone's keypad
+     - IVR Application: Route call to an application that you have developped
+
+Play a message: Play a message that has been created previously
+
+1.2 Routing in function of enterprise working hour
 #################################
- Cấu hình số DID định tuyến các cuộc gọi tới một số điện thoại, một ứng dụng hay chạy một thông điệp có thể tùy ý lựa chọn thời gian thay đổi theo giờ, ngày hoặc tuần.
   .. image:: /images/call_routing/image_en3.jpg 
 
 Indices and tables
