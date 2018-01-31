@@ -8,8 +8,8 @@ title: Hello
 wePhone PHP SDK is a PHP library that allow you to quickly call wePhone APIs. 
 To use the wePhone PHP SDK, you need to get the API key for your enterpise. This can be done by clicking on Settings --> API Integration at the botton of the left menu.
  
-1.1 Setting up the library using composer
-#######################
+1. Setting up the library using composer
+
 Using Composer (https://getcomposer.org/) is an easy way to manage PHP project dependency.
 Create a composer.json file as bellow, then run composer update:
 
